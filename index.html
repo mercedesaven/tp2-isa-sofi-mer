@@ -7,17 +7,19 @@
     <title>ToDo List</title>
 	<script src="todo.js" type="text/javascript"></script>
     </head>
-    <body>
+    <body onload="printTaskList()">
         <header>
-            <input type="text" placeholder="Ingresar tarea" value=""> 
+            <input type="text" placeholder="Ingresar tarea" value="" id="commentBox"> 
         </header>
         <div>
              <!-- tareas pendientes -->
-            <ul>
+             <p>pending</p>
+            <ul id="pending">
 
             </ul>
+            <p>done</p>
             <!-- tareas realizadas -->
-            <ul>
+            <ul id="done">
 
             </ul>
         </div>
