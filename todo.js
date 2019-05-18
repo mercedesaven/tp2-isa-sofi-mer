@@ -1,17 +1,11 @@
-var task, taskLi, newTask, taskPending, taskDone
+var task, taskLi, newTask, taskPending, taskDone, btnInput
 
 var taskInput = [ 
    {text: 'uno', isPending: true}, 
-   {text: 'dos', isPending: false}, 
+   {text: 'dos', isPending: true}, 
    {text: 'tres', isPending: true},
 ]
-
-var printTask = function(){
-    newTask = document.getElementById('commentBox')
-
-
-}
-
+console.log(taskInput)
 var toggleItem = function(btn){
     taskInput[btn.id].isPending = !taskInput[btn.id].isPending 
     printTaskList()
@@ -27,13 +21,14 @@ var deleteItem = function(btn){
 var printTaskList = function(){
     taskPending = document.getElementById ('pending')
     taskPending.innerHTML = ''
+    
     taskInput.map(function(text, index){
         taskLi = document.createElement('li')
         taskPending.appendChild(taskLi) 
         taskLi.innerText = text.text
     
     taskDone = document.getElementById('done')
-    //taskDone.innerHTML =''
+   // taskDone.innerHTML =''
     taskDone.appendChild(taskLi)
 
     var itemBtn = document.createElement('button')
@@ -51,13 +46,32 @@ var printTaskList = function(){
     taskLi.appendChild(itemBtnDelete)
 
     if (text.isPending){
-        pending.appendChild(taskLi)
+        taskPending.appendChild(taskLi)
         }else {
-            done.appendChild(taskLi)
+            taskDone.appendChild(taskLi)
         }
     })
     }
 
+// var createButton = function (){
+//     btnInput = document.getElementById('commentBox')
+//     var btnSend = document.createElement('button')
+//     btnSend.text = "Enviar"
+//     btnSend.appendChild('btnInput')
+// }
 
+var sendTask = function(){
+    var inputBox = document.getElementById('commentBox')
+    var newInput= inputBox.value 
+    if (newInput !== ''){
+        inputBox.value=''
+        taskInput.unshift({
+            text: newInput,
+            isPending: true
+        })
+    printTaskList()
+    }
+
+} 
     
 
