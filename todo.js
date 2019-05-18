@@ -22,13 +22,13 @@ var printTaskList = function(){
     taskPending = document.getElementById ('pending')
     taskPending.innerHTML = ''
     
+    taskDone = document.getElementById('done')
+   taskDone.innerHTML =''
     taskInput.map(function(text, index){
         taskLi = document.createElement('li')
         taskPending.appendChild(taskLi) 
         taskLi.innerText = text.text
     
-    taskDone = document.getElementById('done')
-   // taskDone.innerHTML =''
     taskDone.appendChild(taskLi)
 
     var itemBtn = document.createElement('button')
@@ -53,12 +53,6 @@ var printTaskList = function(){
     })
     }
 
-// var createButton = function (){
-//     btnInput = document.getElementById('commentBox')
-//     var btnSend = document.createElement('button')
-//     btnSend.text = "Enviar"
-//     btnSend.appendChild('btnInput')
-// }
 
 var sendTask = function(){
     var inputBox = document.getElementById('commentBox')
