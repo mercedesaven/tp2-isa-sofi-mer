@@ -15,6 +15,7 @@ var handleKeyPress = function(event){
   }
 
 
+
 var toggleItem = function(btn){
     taskInput[btn.id].isPending = !taskInput[btn.id].isPending 
     printTaskList()
@@ -29,14 +30,22 @@ var deleteItem = function(btn){
 var printTaskList = function(){
     taskPending = document.getElementById ('pending')
     taskPending.innerHTML = ''
+    taskPending.classList.add('ul-pending')
+   
+
     taskDone = document.getElementById('done')
     taskDone.innerHTML =''
+    taskDone.classList.add('ul-done')
+    
    
     taskInput.map(function(text, index){
         taskLi = document.createElement('li')
+        
         taskPending.appendChild(taskLi)
+        taskPending.classList.remove("ul-pending")  // solo cuando todo esta deleteado
         taskLi.innerText = text.text
         taskDone.appendChild(taskLi)
+        taskDone.classList.remove("ul-done") // solo cuando todo esta deleteado
         
     
     var itemBtn = document.createElement('button')
@@ -59,7 +68,9 @@ var printTaskList = function(){
             taskDone.appendChild(taskLi)
         }
   
-     })
+     
+    
+    })
     }
 
 
