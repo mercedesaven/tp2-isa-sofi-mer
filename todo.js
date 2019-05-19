@@ -6,6 +6,15 @@ var taskInput = [
    {text: 'tres', isPending: true},
 ]
 console.log(taskInput)
+
+var handleKeyPress = function(event){
+        
+    if (event.code === 'Enter'){
+      sendTask(event)
+    }
+  }
+
+
 var toggleItem = function(btn){
     taskInput[btn.id].isPending = !taskInput[btn.id].isPending 
     printTaskList()
@@ -17,20 +26,19 @@ var deleteItem = function(btn){
 }
 
 
-
 var printTaskList = function(){
     taskPending = document.getElementById ('pending')
     taskPending.innerHTML = ''
-    
     taskDone = document.getElementById('done')
-   taskDone.innerHTML =''
+    taskDone.innerHTML =''
+   
     taskInput.map(function(text, index){
         taskLi = document.createElement('li')
-        taskPending.appendChild(taskLi) 
+        taskPending.appendChild(taskLi)
         taskLi.innerText = text.text
+        taskDone.appendChild(taskLi)
+        
     
-    taskDone.appendChild(taskLi)
-
     var itemBtn = document.createElement('button')
     itemBtn.innerText = 'hacer click' 
     itemBtn.id = index 
@@ -50,7 +58,8 @@ var printTaskList = function(){
         }else {
             taskDone.appendChild(taskLi)
         }
-    })
+  
+     })
     }
 
 
