@@ -46,3 +46,53 @@ time, mark, audio, video {
 ul li {
     @include font(14px);
 }
+
+header{
+    background-color: #BC3B69;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    margin:auto;
+    width: 90%;
+    overflow: hidden;
+}
+.inputText{
+
+}
+
+.plusBtn{
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    border: 0;
+    background-position: center;
+    border-radius: 50%;
+    background-image: url("../img/iconfinder-icon.svg");
+
+
+}
+
+.deleteBtn {
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/icondeltegrey.png");
+        background-repeat: no-repeat;
+        border: 0;
+        background-position: center;
+        border-radius: 50%;
+    }
+.checkBtn {
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/iconcheckgrey.png");
+        background-repeat: no-repeat;
+        border: 0;
+        background-position: center;
+        border-radius: 50%;
+    }
+
+
+
+
+
+
+

@@ -14,17 +14,17 @@ var handleKeyPress = function(event){
     }
   }
 
-
+var deleteItem = function(btn){
+    taskInput.splice(btn.id, 1)
+    printTaskList()
+}
 
 var toggleItem = function(btn){
     taskInput[btn.id].isPending = !taskInput[btn.id].isPending 
     printTaskList()
 } 
 
-var deleteItem = function(btn){
-    taskInput.splice(btn.id, 1)
-    printTaskList()
-}
+
 
 
 var printTaskList = function(){
@@ -47,20 +47,26 @@ var printTaskList = function(){
         taskDone.appendChild(taskLi)
         taskDone.classList.remove("ul-done") // solo cuando todo esta deleteado
         
+        var itemBtnDelete = document.createElement('button')
+        itemBtnDelete.classList.add('deleteBtn')
+   
+        itemBtnDelete.id = index 
+        itemBtnDelete.onclick = function() {deleteItem(this)} 
+
+
+
+        var itemBtn = document.createElement('button')
+        itemBtn.classList.add('checkBtn')
+     
+        itemBtn.id = index 
+        itemBtn.onclick = function() {toggleItem(this)} 
     
-    var itemBtn = document.createElement('button')
-    itemBtn.innerText = 'hacer click' 
-    itemBtn.id = index 
-    itemBtn.onclick = function() {toggleItem(this)} 
     
-    var itemBtnDelete = document.createElement('button')
-    itemBtnDelete.innerText = 'Delete' 
-    itemBtnDelete.id = index 
-    itemBtnDelete.onclick = function() {deleteItem(this)} 
    
          
-    taskLi.appendChild(itemBtn)
+ 
     taskLi.appendChild(itemBtnDelete)
+    taskLi.appendChild(itemBtn)
 
     if (text.isPending){
         taskPending.appendChild(taskLi)
