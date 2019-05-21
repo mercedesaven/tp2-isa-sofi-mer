@@ -26,14 +26,15 @@ body {
   background-color: #edf0f1;
 }
 
-ul .ul-pending#pending::after {
+.ul-pending#pending::after {
   content: "No hay tareas pendientes";
 }
-ul .ul-done#done::after {
+
+.ul-done#done::after {
   content: "Todavía no completaste ninguna tarea";
 }
 
-ul li {
+p, ul li {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #444;
@@ -41,10 +42,10 @@ ul li {
 
 header {
   background-color: #BC3B69;
-  border-bottom-left-radius: 5%;
-  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
   margin: auto;
-  width: 90%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -72,6 +73,16 @@ header {
   width: 20px;
   height: 20px;
   background-image: url("../img/iconcheckgrey.png");
+  background-repeat: no-repeat;
+  border: 0;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.checkBtnColor {
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/iconcheckcolor.png");
   background-repeat: no-repeat;
   border: 0;
   background-position: center;

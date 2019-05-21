@@ -31,7 +31,7 @@ time, mark, audio, video {
      color: #444
  }
 
- ul {
+ 
     .ul-pending#pending::after {
         content:'No hay tareas pendientes';
    
@@ -41,18 +41,18 @@ time, mark, audio, video {
    
     }
 
-}
 
-ul li {
+
+p, ul li {
     @include font(14px);
 }
 
 header{
     background-color: #BC3B69;
-    border-bottom-left-radius: 5%;
-    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
     margin:auto;
-    width: 90%;
+    width: 100%;
     overflow: hidden;
 }
 .inputText{
@@ -90,7 +90,16 @@ header{
         border-radius: 50%;
     }
 
-
+    .checkBtnColor {
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/iconcheckcolor.png");
+        background-repeat: no-repeat;
+        border: 0;
+        background-position: center;
+        border-radius: 50%;
+ 
+    }
 
 
 
