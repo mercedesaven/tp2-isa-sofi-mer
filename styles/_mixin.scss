@@ -1,0 +1,15 @@
+@mixin  font ($font-size){
+    font-family: 'Roboto', sans-serif;
+    font-size: $font-size;
+    color: #444
+}
+
+@mixin  btn-all ($width, $height, $img){
+    width: $width;
+    height: $height;
+    background-repeat: no-repeat;
+    border: 0;
+    background-position: center;
+    border-radius: 50%;
+    background-image: $img;
+}

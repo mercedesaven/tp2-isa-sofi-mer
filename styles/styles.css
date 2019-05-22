@@ -16,7 +16,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: inherit;
   vertical-align: baseline;
   list-style: none;
   text-decoration: none;
@@ -42,8 +42,8 @@ p, ul li {
 
 header {
   background-color: #BC3B69;
-  border-bottom-left-radius: 10%;
-  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   margin: auto;
   width: 100%;
   overflow: hidden;
@@ -62,31 +62,31 @@ header {
 .deleteBtn {
   width: 20px;
   height: 20px;
-  background-image: url("../img/icondeltegrey.png");
   background-repeat: no-repeat;
   border: 0;
   background-position: center;
   border-radius: 50%;
+  background-image: url("../img/icondeltegrey.png");
 }
 
 .checkBtn {
   width: 20px;
   height: 20px;
-  background-image: url("../img/iconcheckgrey.png");
   background-repeat: no-repeat;
   border: 0;
   background-position: center;
   border-radius: 50%;
+  background-image: url("../img/iconcheckgrey.png");
 }
 
 .checkBtnColor {
   width: 20px;
   height: 20px;
-  background-image: url("../img/iconcheckcolor.png");
   background-repeat: no-repeat;
   border: 0;
   background-position: center;
   border-radius: 50%;
+  background-image: url("../img/iconcheckcolor.png");
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,47 +1,16 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-    vertical-align: baseline;
-    list-style: none;
-    text-decoration: none
-}
+@import "_reset.scss";
+@import "_mixin.scss";
 
  body {
      background-color: #edf0f1;
  }
 
- @mixin  font ($font-size){
-     font-family: 'Roboto', sans-serif;
-     font-size: $font-size;
-     color: #444
- }
-
- 
-    .ul-pending#pending::after {
+.ul-pending#pending::after {
         content:'No hay tareas pendientes';
-   
-    }
-    .ul-done#done::after {
+}
+.ul-done#done::after {
         content:'Todavía no completaste ninguna tarea'
-   
-    }
-
-
+}
 
 p, ul li {
     @include font(14px);
@@ -49,58 +18,28 @@ p, ul li {
 
 header{
     background-color: #BC3B69;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     margin:auto;
     width: 100%;
     overflow: hidden;
 }
-.inputText{
 
-}
-
-.plusBtn{
-    width: 50px;
-    height: 50px;
-    background-repeat: no-repeat;
-    border: 0;
-    background-position: center;
-    border-radius: 50%;
-    background-image: url("../img/iconfinder-icon.svg");
-
-
+.plusBtn {
+    @include btn-all(50px, 50px, url("../img/iconfinder-icon.svg") );
 }
 
 .deleteBtn {
-        width: 20px;
-        height: 20px;
-        background-image: url("../img/icondeltegrey.png");
-        background-repeat: no-repeat;
-        border: 0;
-        background-position: center;
-        border-radius: 50%;
-    }
+    @include btn-all(20px, 20px, url("../img/icondeltegrey.png") );
+}
+
 .checkBtn {
-        width: 20px;
-        height: 20px;
-        background-image: url("../img/iconcheckgrey.png");
-        background-repeat: no-repeat;
-        border: 0;
-        background-position: center;
-        border-radius: 50%;
-    }
+    @include btn-all(20px, 20px, url("../img/iconcheckgrey.png") );
+}
 
-    .checkBtnColor {
-        width: 20px;
-        height: 20px;
-        background-image: url("../img/iconcheckcolor.png");
-        background-repeat: no-repeat;
-        border: 0;
-        background-position: center;
-        border-radius: 50%;
- 
-    }
-
+.checkBtnColor {
+    @include btn-all(20px, 20px, url("../img/iconcheckcolor.png") );
+}
 
 
 
