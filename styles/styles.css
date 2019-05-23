@@ -28,10 +28,20 @@ body {
 
 .ul-pending#pending::after {
   content: "No hay tareas pendientes";
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  color: #444;
+  display: flex;
+  justify-content: center;
 }
 
 .ul-done#done::after {
   content: "Todavía no completaste ninguna tarea";
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  color: #444;
+  display: flex;
+  justify-content: center;
 }
 
 p, ul li {

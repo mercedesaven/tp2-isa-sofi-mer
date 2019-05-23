@@ -7,9 +7,15 @@
 
 .ul-pending#pending::after {
         content:'No hay tareas pendientes';
+        @include font(10px);
+        display: flex;
+        justify-content: center
 }
 .ul-done#done::after {
-        content:'Todavía no completaste ninguna tarea'
+        content:'Todavía no completaste ninguna tarea';
+        @include font(10px);
+        display: flex;
+        justify-content: center
 }
 
 p, ul li {
