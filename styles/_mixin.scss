@@ -1,7 +1,7 @@
 @mixin  font ($font-size){
     font-family: 'Roboto', sans-serif;
     font-size: $font-size;
-    color: #444
+    color: #444;
 }
 
 @mixin  btn-all ($width, $height, $img){
