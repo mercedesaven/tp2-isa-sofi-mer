@@ -34,10 +34,21 @@ header{
         border-radius: 10px 25px 25px 10px;
         padding: 0 0 0 11px;
     }
-
     input::placeholder{
         color: rgb(228, 186, 201);
     }
+}
+
+div ul li{
+    width: 98%;
+    margin:10px auto;
+    height: 48px;
+    background:white;
+    color: grey;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+
 }
 
 .plusBtn {
@@ -50,14 +61,17 @@ header{
 
 .deleteBtn {
     @include btn-all(20px, 20px, url("../img/icondeltegrey.png") );
+    float: right;
 }
 
 .checkBtn {
     @include btn-all(20px, 20px, url("../img/iconcheckgrey.png") );
+    float: right;
 }
 
 .checkBtnColor {
     @include btn-all(20px, 20px, url("../img/iconcheckcolor.png") );
+    float: right;
 }
 
 
