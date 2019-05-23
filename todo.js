@@ -1,9 +1,9 @@
 var task, taskLi, newTask, taskPending, taskDone, btnInput
 
 var taskInput = [
-    // {text: 'uno', isPending: true}, 
-    //{text: 'dos', isPending: true}, 
-    //{text: 'tres', isPending: true},
+    {text: 'uno', isPending: true}, 
+    {text: 'dos', isPending: true}, 
+    {text: 'tres', isPending: true},
 ]
 console.log(taskInput)
 

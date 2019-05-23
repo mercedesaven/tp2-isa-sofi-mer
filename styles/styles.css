@@ -62,6 +62,17 @@ header input::placeholder {
   color: #e4bac9;
 }
 
+div ul li {
+  width: 98%;
+  margin: 10px auto;
+  height: 48px;
+  background: white;
+  color: grey;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+}
+
 .plusBtn {
   width: 50px;
   height: 50px;
@@ -84,6 +95,7 @@ header input::placeholder {
   background-position: center;
   border-radius: 50%;
   background-image: url("../img/icondeltegrey.png");
+  float: right;
 }
 
 .checkBtn {
@@ -94,6 +106,7 @@ header input::placeholder {
   background-position: center;
   border-radius: 50%;
   background-image: url("../img/iconcheckgrey.png");
+  float: right;
 }
 
 .checkBtnColor {
@@ -104,6 +117,7 @@ header input::placeholder {
   background-position: center;
   border-radius: 50%;
   background-image: url("../img/iconcheckcolor.png");
+  float: right;
 }
 
 body .box .line {
