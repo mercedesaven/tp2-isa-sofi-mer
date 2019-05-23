@@ -23,7 +23,7 @@ time, mark, audio, video {
 }
 
 body {
-  background-color: #edf0f1;
+  background-color: #ddccd5;
 }
 
 .ul-pending#pending::after {
@@ -37,7 +37,7 @@ body {
 p, ul li {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  color: #444;
+  color: rgb(121, 133, 105);
 }
 
 header {
@@ -87,6 +87,11 @@ header {
   background-position: center;
   border-radius: 50%;
   background-image: url("../img/iconcheckcolor.png");
+}
+
+body .box .line {
+  border-bottom: 1px solid #085f63;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
