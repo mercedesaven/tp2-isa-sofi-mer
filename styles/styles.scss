@@ -81,5 +81,18 @@ div ul li{
 }
 
 
+.ul-done{
+    &:before{
+    content:'';
+    background-color: rgb(109, 96, 96);
+    width: 50%;
+    height: 2px;
+    display: block;
+    margin: auto
+
+    }
+
+}
+
 
 
