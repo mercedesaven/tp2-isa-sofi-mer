@@ -6,10 +6,16 @@
  }
 
 .ul-pending#pending::after {
-        content:'No hay tareas pendientes';
+    @include font(12px);
+    text-align: center;
+    font-style:italic;
+    content:'No hay tareas pendientes';
 }
 .ul-done#done::after {
-        content:'Todavía no completaste ninguna tarea'
+    @include font(12px);
+    text-align: center;
+    font-style:italic;
+    content:'Todavía no completaste ninguna tarea'
 }
 
 p, ul li {
@@ -62,7 +68,7 @@ div ul li{
 .deleteBtn {
     @include btn-all(20px, 20px, url("../img/IconDeleteNew.png") );
     margin-left: 15px;
-
+    background-color: transparent;
    /* &:before{
         content:'';
         background-color: grey;
@@ -75,16 +81,27 @@ div ul li{
         }*/
 }
 
+.ul-done{
+    &:before{
+    content:'';
+    background-color: #d8e5e0;
+    width: 50%;
+    height: 2px;
+    display: block;
+    margin: auto
+    }
+}
+
 .checkBtn {
     @include btn-all(20px, 20px, url("../img/iconcheckgrey.png") );
-   
+    background-color: transparent;
 }
 
 .checkBtnColor {
     @include btn-all(20px, 20px, url("../img/iconcheckcolor.png") );
-   
-    
+    background-color: transparent;
 }
+
 
 
 

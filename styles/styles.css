@@ -27,10 +27,20 @@ body {
 }
 
 .ul-pending#pending::after {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #444;
+  text-align: center;
+  font-style: italic;
   content: "No hay tareas pendientes";
 }
 
 .ul-done#done::after {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #444;
+  text-align: center;
+  font-style: italic;
   content: "Todavía no completaste ninguna tarea";
 }
 
@@ -101,6 +111,7 @@ div ul li {
   background-image: url("../img/IconDeleteNew.png");
   float: right;
   margin-left: 15px;
+  background-color: transparent;
   /* &:before{
        content:'';
        background-color: grey;
@@ -116,6 +127,15 @@ div ul li {
   background-color: #e7e5e5;
 }
 
+.ul-done:before {
+  content: "";
+  background-color: #d8e5e0;
+  width: 50%;
+  height: 2px;
+  display: block;
+  margin: auto;
+}
+
 .checkBtn {
   width: 20px;
   height: 20px;
@@ -125,6 +145,7 @@ div ul li {
   border-radius: 50%;
   background-image: url("../img/iconcheckgrey.png");
   float: right;
+  background-color: transparent;
 }
 .checkBtn:hover {
   background-color: #e7e5e5;
@@ -139,6 +160,7 @@ div ul li {
   border-radius: 50%;
   background-image: url("../img/iconcheckcolor.png");
   float: right;
+  background-color: transparent;
 }
 .checkBtnColor:hover {
   background-color: #e7e5e5;
