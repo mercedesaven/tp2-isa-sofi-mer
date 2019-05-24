@@ -12,4 +12,9 @@
     background-position: center;
     border-radius: 50%;
     background-image: $img;
+    float: right;
+
+    &:hover{
+        background-color: rgb(231, 229, 229);
+    }
 }

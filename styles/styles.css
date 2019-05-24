@@ -63,14 +63,14 @@ header input::placeholder {
 }
 
 div ul li {
-  width: 98%;
+  width: 96%;
   margin: 10px auto;
-  height: 48px;
   background: white;
   color: grey;
   font-size: 15px;
   border: none;
-  border-radius: 10px;
+  border-radius: 7px;
+  padding: 16px;
 }
 
 .plusBtn {
@@ -81,10 +81,14 @@ div ul li {
   background-position: center;
   border-radius: 50%;
   background-image: url("../img/iconfinder-icon.svg");
+  float: right;
   position: absolute;
   top: 15px;
   right: 17px;
   background-size: 18px, 18px;
+}
+.plusBtn:hover {
+  background-color: #e7e5e5;
 }
 
 .deleteBtn {
@@ -94,8 +98,22 @@ div ul li {
   border: 0;
   background-position: center;
   border-radius: 50%;
-  background-image: url("../img/icondeltegrey.png");
+  background-image: url("../img/IconDeleteNew.png");
   float: right;
+  margin-left: 15px;
+  /* &:before{
+       content:'';
+       background-color: grey;
+       width: 1px;
+       height: 20px;
+       display: block;
+       margin:auto;
+       float:left;
+
+       }*/
+}
+.deleteBtn:hover {
+  background-color: #e7e5e5;
 }
 
 .checkBtn {
@@ -108,6 +126,9 @@ div ul li {
   background-image: url("../img/iconcheckgrey.png");
   float: right;
 }
+.checkBtn:hover {
+  background-color: #e7e5e5;
+}
 
 .checkBtnColor {
   width: 20px;
@@ -118,6 +139,9 @@ div ul li {
   border-radius: 50%;
   background-image: url("../img/iconcheckcolor.png");
   float: right;
+}
+.checkBtnColor:hover {
+  background-color: #e7e5e5;
 }
 
 /*# sourceMappingURL=styles.css.map */
