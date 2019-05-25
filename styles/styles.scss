@@ -1,26 +1,28 @@
 @import "_reset.scss";
 @import "_mixin.scss";
 
- body {
-     background-color: #edf0f1;
- }
-
-.ul-pending#pending::after {
+body {
+background-color: #edf0f1;
+    }
+    .ul-pending#pending::after {
     @include font(12px);
     text-align: center;
-    font-style:italic;
+    color:grey;
+    display:block;
+    margin-bottom: 20px;
     content:'No hay tareas pendientes';
-}
-.ul-done#done::after {
+    }
+    .ul-done#done::after {
     @include font(12px);
     text-align: center;
-    font-style:italic;
+    color:grey;
+    display: block;
+    margin-top:20px;
     content:'Todavía no completaste ninguna tarea'
-}
-
-p, ul li {
+    }
+    p, ul li {
     @include font(14px);
-}
+    }
 
 header{
     background-color: #BC3B69;
@@ -29,19 +31,21 @@ header{
     padding:15px;
     top: 0;
     left: 0;
+    margin-bottom: 35px;
     
     input#commentBox.inputText{
-        width: 99%;
-        height: 48px;
-        background: rgba(255, 255, 255, 0.2);
-        color:white;
-        font-size: 15px;
-        border: none;
-        border-radius: 10px 25px 25px 10px;
-        padding: 0 0 0 11px;
+    width: 99%;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.2);
+    color:white;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px 25px 25px 10px;
+    padding: 0 0 0 11px;
     }
+
     input::placeholder{
-        color: rgb(228, 186, 201);
+    color: rgb(228, 186, 201);
     }
 }
 
@@ -54,7 +58,6 @@ div ul li{
     border: none;
     border-radius: 7px;
     padding: 16px;
-
 }
 
 .plusBtn {
@@ -85,7 +88,7 @@ div ul li{
     &:before{
     content:'';
     background-color: #d8e5e0;
-    width: 50%;
+    width: 20%;
     height: 2px;
     display: block;
     margin: auto

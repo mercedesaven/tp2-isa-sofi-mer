@@ -24,22 +24,13 @@ var toggleItem = function (btn) {
     printTaskList()
 }
 
-
-
-
 var printTaskList = function () {
     taskPending = document.getElementById('pending')
     taskPending.innerHTML = ''
-
-
     taskDone = document.getElementById('done')
     taskDone.innerHTML = ''
-    
-
-
     taskInput.map(function (text, index) {
         taskLi = document.createElement('li')
-
         taskPending.appendChild(taskLi)
         //taskPending.classList.remove("ul-pending")  // solo cuando todo esta deleteado
         taskLi.innerText = text.text
@@ -48,24 +39,13 @@ var printTaskList = function () {
 
         var itemBtnDelete = document.createElement('button')
         itemBtnDelete.classList.add('deleteBtn')
-
         itemBtnDelete.id = index
         itemBtnDelete.onclick = function () { deleteItem(this) }
 
-
-
         var itemBtn = document.createElement('button')
         itemBtn.classList.add('checkBtn')
-        
-
         itemBtn.id = index
         itemBtn.onclick = function () { toggleItem(this) }
-
-
-
-
-
-
         taskLi.appendChild(itemBtnDelete)
         taskLi.appendChild(itemBtn)
 
@@ -75,9 +55,6 @@ var printTaskList = function () {
             taskDone.appendChild(taskLi)
             itemBtn.classList.toggle('checkBtnColor')
         }
-
-
-
     })
 
     if(taskPending.childElementCount === 0){
@@ -92,12 +69,9 @@ var printTaskList = function () {
         taskDone.classList.remove('ul-done')
     }
 
-    if( taskInput !== taskPending){
-
-        
+    if( taskInput !== taskPending){   
     }
 }
-
 
 var sendTask = function () {
     var inputBox = document.getElementById('commentBox')
@@ -110,5 +84,4 @@ var sendTask = function () {
         })
         printTaskList()
     }
-
 } 

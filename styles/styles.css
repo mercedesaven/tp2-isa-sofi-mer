@@ -31,7 +31,9 @@ body {
   font-size: 12px;
   color: #444;
   text-align: center;
-  font-style: italic;
+  color: grey;
+  display: block;
+  margin-bottom: 20px;
   content: "No hay tareas pendientes";
 }
 
@@ -40,7 +42,9 @@ body {
   font-size: 12px;
   color: #444;
   text-align: center;
-  font-style: italic;
+  color: grey;
+  display: block;
+  margin-top: 20px;
   content: "Todavía no completaste ninguna tarea";
 }
 
@@ -57,6 +61,7 @@ header {
   padding: 15px;
   top: 0;
   left: 0;
+  margin-bottom: 35px;
 }
 header input#commentBox.inputText {
   width: 99%;
@@ -130,7 +135,7 @@ div ul li {
 .ul-done:before {
   content: "";
   background-color: #d8e5e0;
-  width: 50%;
+  width: 20%;
   height: 2px;
   display: block;
   margin: auto;
