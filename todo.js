@@ -32,10 +32,10 @@ var printTaskList = function () {
     taskInput.map(function (text, index) {
         taskLi = document.createElement('li')
         taskPending.appendChild(taskLi)
-        //taskPending.classList.remove("ul-pending")  // solo cuando todo esta deleteado
+        
         taskLi.innerText = text.text
         taskDone.appendChild(taskLi)
-        // taskDone.classList.remove("ul-done") // solo cuando todo esta deleteado
+        
 
         var itemBtnDelete = document.createElement('button')
         itemBtnDelete.classList.add('deleteBtn')

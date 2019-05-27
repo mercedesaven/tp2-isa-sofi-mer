@@ -72,17 +72,7 @@ div ul li{
     @include btn-all(20px, 20px, url("../img/IconDeleteNew.png") );
     margin-left: 15px;
     background-color: transparent;
-   /* &:before{
-        content:'';
-        background-color: grey;
-        width: 1px;
-        height: 20px;
-        display: block;
-        margin:auto;
-        float:left;
-        
-        }*/
-}
+ }
 
 ul:nth-child(2){
     &:before{

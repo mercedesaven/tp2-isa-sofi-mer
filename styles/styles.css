@@ -117,16 +117,6 @@ div ul li {
   float: right;
   margin-left: 15px;
   background-color: transparent;
-  /* &:before{
-       content:'';
-       background-color: grey;
-       width: 1px;
-       height: 20px;
-       display: block;
-       margin:auto;
-       float:left;
-
-       }*/
 }
 .deleteBtn:hover {
   background-color: #e7e5e5;
