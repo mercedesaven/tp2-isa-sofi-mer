@@ -1,51 +1,110 @@
 @import "_reset.scss";
 @import "_mixin.scss";
 
- body {
-     background-color: #edf0f1;
- }
-
-.ul-pending#pending::after {
-        content:'No hay tareas pendientes';
-        @include font(10px);
-        display: flex;
-        justify-content: center
-}
-.ul-done#done::after {
-        content:'Todavía no completaste ninguna tarea';
-        @include font(10px);
-        display: flex;
-        justify-content: center
-}
-
-p, ul li {
+body {
+background-color: #edf0f1;
+    }
+    .ul-pending#pending::after {
+    @include font(12px);
+    text-align: center;
+    color:grey;
+    display:block;
+    margin-bottom: 20px;
+    content:'No hay tareas pendientes';
+    }
+    .ul-done#done::after {
+    @include font(12px);
+    text-align: center;
+    color:grey;
+    display: block;
+    margin-top:20px;
+    content:'Todavía no completaste ninguna tarea'
+    }
+    p, ul li {
     @include font(14px);
-}
+    }
 
 header{
     background-color: #BC3B69;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    margin:auto;
-    width: 100%;
-    overflow: hidden;
+    padding:15px;
+    top: 0;
+    left: 0;
+    margin-bottom: 35px;
+    
+    input#commentBox.inputText{
+    width: 99%;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.2);
+    color:white;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px 25px 25px 10px;
+    padding: 0 0 0 11px
+    }
+
+    input::placeholder{
+    color: rgb(228, 186, 201);
+    }
+}
+
+div ul li{
+    width: 96%;
+    margin:10px auto;
+    background:white;
+    color: grey;
+    font-size: 15px;
+    border: none;
+    border-radius: 7px;
+    padding: 16px;
 }
 
 .plusBtn {
     @include btn-all(50px, 50px, url("../img/iconfinder-icon.svg") );
+    position: absolute;
+    top: 15px;
+    right: 17px;
+    background-size: 18px, 18px;
 }
 
 .deleteBtn {
-    @include btn-all(20px, 20px, url("../img/icondeltegrey.png") );
+    @include btn-all(20px, 20px, url("../img/IconDeleteNew.png") );
+    margin-left: 15px;
+    background-color: transparent;
+   /* &:before{
+        content:'';
+        background-color: grey;
+        width: 1px;
+        height: 20px;
+        display: block;
+        margin:auto;
+        float:left;
+        
+        }*/
+}
+
+ul:nth-child(2){
+    &:before{
+    content:'';
+    background-color: #d8e5e0;
+    width: 20%;
+    height: 2px;
+    display: block;
+    margin: auto
+    }
 }
 
 .checkBtn {
     @include btn-all(20px, 20px, url("../img/iconcheckgrey.png") );
+    background-color: transparent;
 }
 
 .checkBtnColor {
     @include btn-all(20px, 20px, url("../img/iconcheckcolor.png") );
+    background-color: transparent;
 }
+
 
 
 

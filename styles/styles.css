@@ -27,21 +27,25 @@ body {
 }
 
 .ul-pending#pending::after {
-  content: "No hay tareas pendientes";
   font-family: "Roboto", sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   color: #444;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  color: grey;
+  display: block;
+  margin-bottom: 20px;
+  content: "No hay tareas pendientes";
 }
 
 .ul-done#done::after {
-  content: "Todavía no completaste ninguna tarea";
   font-family: "Roboto", sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   color: #444;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  color: grey;
+  display: block;
+  margin-top: 20px;
+  content: "Todavía no completaste ninguna tarea";
 }
 
 p, ul li {
@@ -54,9 +58,34 @@ header {
   background-color: #BC3B69;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  margin: auto;
-  width: 100%;
-  overflow: hidden;
+  padding: 15px;
+  top: 0;
+  left: 0;
+  margin-bottom: 35px;
+}
+header input#commentBox.inputText {
+  width: 99%;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px 25px 25px 10px;
+  padding: 0 0 0 11px;
+}
+header input::placeholder {
+  color: #e4bac9;
+}
+
+div ul li {
+  width: 96%;
+  margin: 10px auto;
+  background: white;
+  color: grey;
+  font-size: 15px;
+  border: none;
+  border-radius: 7px;
+  padding: 16px;
 }
 
 .plusBtn {
@@ -67,6 +96,14 @@ header {
   background-position: center;
   border-radius: 50%;
   background-image: url("../img/iconfinder-icon.svg");
+  float: right;
+  position: absolute;
+  top: 15px;
+  right: 17px;
+  background-size: 18px, 18px;
+}
+.plusBtn:hover {
+  background-color: #e7e5e5;
 }
 
 .deleteBtn {
@@ -76,7 +113,32 @@ header {
   border: 0;
   background-position: center;
   border-radius: 50%;
-  background-image: url("../img/icondeltegrey.png");
+  background-image: url("../img/IconDeleteNew.png");
+  float: right;
+  margin-left: 15px;
+  background-color: transparent;
+  /* &:before{
+       content:'';
+       background-color: grey;
+       width: 1px;
+       height: 20px;
+       display: block;
+       margin:auto;
+       float:left;
+
+       }*/
+}
+.deleteBtn:hover {
+  background-color: #e7e5e5;
+}
+
+ul:nth-child(2):before {
+  content: "";
+  background-color: #d8e5e0;
+  width: 20%;
+  height: 2px;
+  display: block;
+  margin: auto;
 }
 
 .checkBtn {
@@ -87,6 +149,11 @@ header {
   background-position: center;
   border-radius: 50%;
   background-image: url("../img/iconcheckgrey.png");
+  float: right;
+  background-color: transparent;
+}
+.checkBtn:hover {
+  background-color: #e7e5e5;
 }
 
 .checkBtnColor {
@@ -97,6 +164,11 @@ header {
   background-position: center;
   border-radius: 50%;
   background-image: url("../img/iconcheckcolor.png");
+  float: right;
+  background-color: transparent;
+}
+.checkBtnColor:hover {
+  background-color: #e7e5e5;
 }
 
 /*# sourceMappingURL=styles.css.map */

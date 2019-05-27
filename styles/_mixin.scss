@@ -1,7 +1,7 @@
 @mixin  font ($font-size){
     font-family: 'Roboto', sans-serif;
     font-size: $font-size;
-    color: #444
+    color: #444;
 }
 
 @mixin  btn-all ($width, $height, $img){
@@ -12,4 +12,9 @@
     background-position: center;
     border-radius: 50%;
     background-image: $img;
+    float: right;
+
+    &:hover{
+        background-color: rgb(231, 229, 229);
+    }
 }
