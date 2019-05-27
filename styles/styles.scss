@@ -106,6 +106,19 @@ div ul li{
 }
 
 
+@media (min-width: 420px) {
+input#commentBox.inputText{
+    width: 70%;
+}
+.plusBtn {
+    right: 8px;  
+}
+div ul li{
+    width: 88%;
+}
+}
+
+
 
 
 
