@@ -1,14 +1,9 @@
 var task, taskLi, newTask, taskPending, taskDone, btnInput
 
 var taskInput = [
-    {text: 'uno', isPending: true}, 
-    {text: 'dos', isPending: true}, 
-    {text: 'tres', isPending: true},
-]
-console.log(taskInput)
+    ]
 
 var handleKeyPress = function (event) {
-
     if (event.code === 'Enter') {
         sendTask(event)
     }

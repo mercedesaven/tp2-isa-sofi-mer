@@ -1,28 +1,33 @@
 @import "_reset.scss";
 @import "_mixin.scss";
 
+
+
 body {
-background-color: #edf0f1;
-    }
-    .ul-pending#pending::after {
+    background-color: #edf0f1;
+}
+
+.ul-pending#pending::after {
     @include font(12px);
     text-align: center;
     color:grey;
     display:block;
     margin-bottom: 20px;
     content:'No hay tareas pendientes';
-    }
-    .ul-done#done::after {
+}
+
+.ul-done#done::after {
     @include font(12px);
     text-align: center;
     color:grey;
     display: block;
     margin-top:20px;
     content:'Todavía no completaste ninguna tarea'
-    }
-    p, ul li {
+}
+
+p, ul li {
     @include font(14px);
-    }
+}
 
 header{
     background-color: #BC3B69;
@@ -33,20 +38,24 @@ header{
     left: 0;
     margin-bottom: 35px;
     
-    input#commentBox.inputText{
-    width: 99%;
-    height: 48px;
-    background: rgba(255, 255, 255, 0.2);
-    color:white;
-    font-size: 15px;
-    border: none;
-    border-radius: 10px 25px 25px 10px;
-    padding: 0 0 0 11px
-    }
+        input#commentBox.inputText{
+        width: 99%;
+        height: 48px;
+        background: rgba(255, 255, 255, 0.2);
+        color:#FFFFF;
+        font-size: 15px;
+        border: none;
+        position: relative;
+        border-radius: 10px 25px 25px 10px;
+        padding: 0 0 0 11px
+        }
 
-    input::placeholder{
-    color: rgb(228, 186, 201);
-    }
+        input::placeholder{
+        color: rgb(228, 186, 201);
+        }
+        input:focus {
+        outline: none;
+        }    
 }
 
 div ul li{
@@ -54,7 +63,7 @@ div ul li{
     margin:10px auto;
     background:white;
     color: grey;
-    font-size: 15px;
+    @include font(15px);
     border: none;
     border-radius: 7px;
     padding: 16px;
@@ -64,7 +73,7 @@ div ul li{
     @include btn-all(50px, 50px, url("../img/iconfinder-icon.svg") );
     position: absolute;
     top: 15px;
-    right: 17px;
+    right: 7px;
     background-size: 18px, 18px;
 }
 
@@ -73,6 +82,16 @@ div ul li{
     margin-left: 15px;
     background-color: transparent;
  }
+
+.checkBtn {
+    @include btn-all(20px, 20px, url("../img/iconcheckgrey.png") );
+    background-color: transparent;
+}
+
+.checkBtnColor {
+    @include btn-all(20px, 20px, url("../img/iconcheckcolor.png") );
+    background-color: transparent;
+}
 
 ul:nth-child(2){
     &:before{
@@ -85,17 +104,62 @@ ul:nth-child(2){
     }
 }
 
-.checkBtn {
-    @include btn-all(20px, 20px, url("../img/iconcheckgrey.png") );
-    background-color: transparent;
+@media only screen and (max-width: 999px) {
+    div ul li{
+    width: 84%;
+    }
 }
 
-.checkBtnColor {
-    @include btn-all(20px, 20px, url("../img/iconcheckcolor.png") );
-    background-color: transparent;
+@media only screen and (max-width: 420px) {
+    div ul li{
+    width: 84%;
+    }
+    .ul-pending#pending::after {
+        @include font(10px);
+    }
+    
+    .ul-done#done::after {
+        @include font(10px);
+    }
 }
 
+@media only screen and (max-width: 275px) {
+    header{        
+            input#commentBox.inputText{
+            height: 39px;
+            font-size: 10px;
+            padding: 0 0 0 5px
+            }
+    }
+    .plusBtn {
+        @include btn-all(40px, 40px, url("../img/iconfinder-icon.svg") );
+        background-size: 15px, 17px;
+    }    
+    
+    div ul li{
+    width: 79%;
+    padding: 10px;
+    @include font(12px)
+    }
 
 
+    .deleteBtn {
+        background-size: 13px, 13px;
+     }
+    
+    .checkBtn {
+        background-size: 13px, 13px;
+    }
+    
+    .checkBtnColor {
+        background-size: 13px, 13px;
+    }
 
-
+    .ul-pending#pending::after {
+        @include font(10px);
+    }
+    
+    .ul-done#done::after {
+        @include font(10px);
+    }
+}

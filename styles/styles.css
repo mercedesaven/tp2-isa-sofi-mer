@@ -67,14 +67,18 @@ header input#commentBox.inputText {
   width: 99%;
   height: 48px;
   background: rgba(255, 255, 255, 0.2);
-  color: white;
+  color: #FFFFF;
   font-size: 15px;
   border: none;
+  position: relative;
   border-radius: 10px 25px 25px 10px;
   padding: 0 0 0 11px;
 }
 header input::placeholder {
   color: #e4bac9;
+}
+header input:focus {
+  outline: none;
 }
 
 div ul li {
@@ -82,7 +86,9 @@ div ul li {
   margin: 10px auto;
   background: white;
   color: grey;
+  font-family: "Roboto", sans-serif;
   font-size: 15px;
+  color: #444;
   border: none;
   border-radius: 7px;
   padding: 16px;
@@ -99,7 +105,7 @@ div ul li {
   float: right;
   position: absolute;
   top: 15px;
-  right: 17px;
+  right: 7px;
   background-size: 18px, 18px;
 }
 .plusBtn:hover {
@@ -120,15 +126,6 @@ div ul li {
 }
 .deleteBtn:hover {
   background-color: #e7e5e5;
-}
-
-ul:nth-child(2):before {
-  content: "";
-  background-color: #d8e5e0;
-  width: 20%;
-  height: 2px;
-  display: block;
-  margin: auto;
 }
 
 .checkBtn {
@@ -159,6 +156,92 @@ ul:nth-child(2):before {
 }
 .checkBtnColor:hover {
   background-color: #e7e5e5;
+}
+
+ul:nth-child(2):before {
+  content: "";
+  background-color: #d8e5e0;
+  width: 20%;
+  height: 2px;
+  display: block;
+  margin: auto;
+}
+
+@media only screen and (max-width: 999px) {
+  div ul li {
+    width: 84%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  div ul li {
+    width: 84%;
+  }
+
+  .ul-pending#pending::after {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    color: #444;
+  }
+
+  .ul-done#done::after {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    color: #444;
+  }
+}
+@media only screen and (max-width: 275px) {
+  header input#commentBox.inputText {
+    height: 39px;
+    font-size: 10px;
+    padding: 0 0 0 5px;
+  }
+
+  .plusBtn {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    border: 0;
+    background-position: center;
+    border-radius: 50%;
+    background-image: url("../img/iconfinder-icon.svg");
+    float: right;
+    background-size: 15px, 17px;
+  }
+  .plusBtn:hover {
+    background-color: #e7e5e5;
+  }
+
+  div ul li {
+    width: 79%;
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    color: #444;
+  }
+
+  .deleteBtn {
+    background-size: 13px, 13px;
+  }
+
+  .checkBtn {
+    background-size: 13px, 13px;
+  }
+
+  .checkBtnColor {
+    background-size: 13px, 13px;
+  }
+
+  .ul-pending#pending::after {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    color: #444;
+  }
+
+  .ul-done#done::after {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    color: #444;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
