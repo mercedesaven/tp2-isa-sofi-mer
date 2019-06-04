@@ -123,8 +123,10 @@ ul:nth-child(2){
     }
 }
 
+// es recomendable que el breakpoint minimo de mobile este más cera de 360px
 @media only screen and (max-width: 275px) {
     header{        
+            // con la clase es suficiente
             input#commentBox.inputText{
             height: 39px;
             font-size: 10px;

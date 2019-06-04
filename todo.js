@@ -20,18 +20,20 @@ var toggleItem = function (btn) {
 }
 
 var printTaskList = function () {
+    // la seleccion y blanqueamiento de Ul podría ser extraido en otra función
     taskPending = document.getElementById('pending')
     taskPending.innerHTML = ''
     taskDone = document.getElementById('done')
     taskDone.innerHTML = ''
     taskInput.map(function (text, index) {
+        // la creación de item podría ser extraida en otra función
         taskLi = document.createElement('li')
         taskPending.appendChild(taskLi)
         
         taskLi.innerText = text.text
         taskDone.appendChild(taskLi)
         
-
+        // la creación de botones podría ser extraida en otra función
         var itemBtnDelete = document.createElement('button')
         itemBtnDelete.classList.add('deleteBtn')
         itemBtnDelete.id = index
@@ -52,6 +54,7 @@ var printTaskList = function () {
         }
     })
 
+    // la validacion de lista vacia es igual en ambos casos, debería estar extraida en otra función
     if(taskPending.childElementCount === 0){
         taskPending.classList.add('ul-pending')
     } else {
@@ -64,6 +67,7 @@ var printTaskList = function () {
         taskDone.classList.remove('ul-done')
     }
 
+    // este if que noe stá haciendo nada
     if( taskInput !== taskPending){   
     }
 }
